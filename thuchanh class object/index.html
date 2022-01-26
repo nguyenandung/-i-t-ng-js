@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+  /*  function Student(id, name,address) {
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.getInfor = function () {
+                return "Id= "+this.id + "Name= "+this.name+"Address="+this.address;
+            }
+    }
+    var students = new Student(1, "Nguyễn An Dũng","Nam Định");
+    console.log(students.getInfor());*/
+
+  var student = {
+      id:1,
+      name:"Nguyễn AN DŨng",
+      address:"Nam Định",
+      getInfor: function () {
+            return "Id= "+ this.id + " Tên: "+ this.name + " Address= "+this.address;
+      }
+  }
+  console.log(student.name)
+  console.log(student.getInfor());
+</script>
+</body>
+</html>
