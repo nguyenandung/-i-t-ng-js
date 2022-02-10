@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let apple = function() {
+            this.weight = 10;
+            function apple(weight){
+                this.weight = weight;
+            }
+            this.decrease = function(){
+                this.weight--;
+            };
+            this.isEmpty = function(){
+                return this.weight ;
+            }
+        };
+
+        let human= function(){
+            this.name = 'A';
+            this.gender = true;
+            this.weight = 60;
+            function human(){
+                this.name = name;
+                this.gender = gender;
+                this.weight =weight;
+            }
+
+            this.isMale = function(){
+                return this.gender;
+            }
+            this.setGender = function(gender){
+                return this.gender =gender;
+            }
+            this.checkApple = function(Apple){
+                return Apple.em==isEmpty();
+            }
+
+            this.eat = function(Apple){
+                Apple.decrease();
+            }
+            this.say = function (Apple){
+                alert('Hello');
+
+            }
+
+            this.getName = function (){
+                return this.name;
+            }
+            this.setName = function (name){
+                return this.name = name;
+            }
+            this.getWeight = function (){
+                return this.weight;
+            }
+            this.setWeight = function (weight){
+                return this.weight = weight;
+            }
+        };
+
+        let adam = new human("Adam",true,60);
+        let eva = new human("Eva",false,50);
+        let appleForEat =new apple(9);
+        while(appleForEat.isEmpty()){
+            eva.eat(appleForEat);
+            adam.eat(appleForEat);
+        }
+
+    </script>
+</body>
+</html>

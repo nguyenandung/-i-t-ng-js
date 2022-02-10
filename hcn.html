@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500px" height="200px"></canvas>
+
+
+    <script>
+        let hcn = function (chieuDai, chieuRong){
+            this.cd = chieuDai;
+            this.cr = chieuRong;
+            this.getS = function(){
+                return this.cd*this.cr;
+            }
+            this.getP = function(){
+                return 2*(this.cd+this.cr);
+            }
+            this.getChieuDai = function(){
+                return this.cd;
+            }
+            this.getChieuRong = function(){
+                return this.cr;
+            }
+        }
+
+        let HCN = new hcn (3,4);
+        alert(HCN.getS() +',' + HCN.getP());
+        var c = document.getElementById('myCanvas');
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0,0,HCN.getChieuRong()*50,HCN.getChieuDai()*50);
+    </script>
+</body>
+</html>

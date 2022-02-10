@@ -1,0 +1,3 @@
+class ElectricLamp{
+    con
+}
