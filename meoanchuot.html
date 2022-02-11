@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Rat {
+            constructor(name,weight,speed) {
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+                this.status = true;
+            
+            }
+            say(string) {
+                console.log("chit chit");
+            }
+
+        }
+
+        class Cat {
+            constructor(name,weight,speed){
+                this.name = name ;
+                this.weight = weight;
+                this.speed = speed;
+            }
+            say(string) {
+                console.log("meo meo");
+            }
+            catches(Rat){
+                return this.speed > Rat.speed;
+            }
+            eat(Rat){
+                if(Rat.status){
+                    this.weight += Rat.weight;
+                    Rat.status = false;
+                }else {
+                    console.log("con nay chet");
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
