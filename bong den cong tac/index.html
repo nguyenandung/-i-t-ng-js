@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
+    <button onclick="turnOnLamp()">ON</button>
+    <button onclick="turnOffLamp()">OFF</button>
     
+    <div id="lamp"></div>
+    <script src="./ElectricLamp.js"></script>
+    <script src="./SwitchButton.js"></script>
+    <script>
+        let lamp = new ElectricLamp();
+        let button = new SwitchButton();
+        button.connectToLamp(lamp);
+   
+        
+        function turnOnLamp() {
+            button.switchOn();
+            let LampElement = document.getElementById('lamp');
+            LampElement.style.backgroundColor = (lamp.status) ? 'red':'gray';
+        }
+        function turnOffLamp() {
+            button.switchOff();
+            let LampElement = document.getElementById('lamp');
+            LampElement.style.backgroundColor = (lamp.status) ? 'gray':'gray';
+        }
+    </script>
 </body>
 </html>
